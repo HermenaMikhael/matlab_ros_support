@@ -1,6 +1,6 @@
 classdef rosClassHandle_UR5e
     
-    properties      
+    properties       
 
         % Subscribers
         joint_state_sub;
@@ -41,7 +41,7 @@ classdef rosClassHandle_UR5e
 
     end
 
-    methods 
+    methods  
         function r = rosClassHandle_UR5e
             r.joint_state_sub         = rossubscriber("/joint_states");
 
@@ -69,7 +69,7 @@ classdef rosClassHandle_UR5e
             
             % Robot
             r.UR5eROBOT               = loadrobot("universalUR5e", "DataFormat", "row");
-            r.UR5eROBOT               = urdfAdjustment(r.UR5eROBOT,"UR5e",0);
+            %r.UR5eROBOT               = urdfAdjustment(r.UR5eROBOT,"UR5e",0);
             r.initialRobotJConfig     = [0,0,0,0,0,0];
 
             % IKs
